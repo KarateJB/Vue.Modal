@@ -71,8 +71,7 @@ Vue.component('pop-modal', {
             //$(modalMask).css("height", windowHeight);
 
 
-            if (windowWidth <= 991) {
-               
+            if (windowWidth <= 100) {
                 return;
             }
             else {

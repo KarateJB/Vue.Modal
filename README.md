@@ -11,9 +11,9 @@ $ npm install vue-slim-modal --save
 
 ## Usage
 
-* Non-fit height
+### Non-fit height
 
-[Demo]()
+[Demo](http://karatejb.github.io/demo/vue-slim-modal/demo1.html)
 
 ```
 <pop-modal v-if="showModal" v-on:close="closeModal" v-on:cancel="showModal=false">
@@ -29,9 +29,9 @@ $ npm install vue-slim-modal --save
 </pop-modal>
 ```
 
-* Fit height and enable scrollbar for long content
+### Fit height and enable scrollbar for long content
 
-[Demo]()
+[Demo](http://karatejb.github.io/demo/vue-slim-modal/demo2.html)
 
 ```
 <pop-modal v-if="showModal" is-fit="true" v-on:close="closeModal" v-on:cancel="showModal=false">
