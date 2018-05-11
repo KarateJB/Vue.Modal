@@ -1,14 +1,14 @@
 Vue.component('pop-modal', {
-    props: ['isScroll'],
+    props: ['isFit'],
     data: function () {
         return {
             modalMaskClass: {
-                'modal-mask': this.isScroll,
-                'modal-mask-scroll': !this.isScroll
+                'modal-mask': this.isFit,
+                'modal-mask-scroll': !this.isFit
             },
             modalBodyClass: {
-                'modal-body': !this.isScroll,
-                'modal-body-scroll': this.isScroll
+                'modal-body': !this.isFit,
+                'modal-body-scroll': this.isFit
             },
             modalMaskStyle: null
         }
@@ -112,7 +112,7 @@ Vue.component('pop-modal', {
         let vm = this;
 
 
-        if (vm.isScroll !== "true") {
+        if (vm.isFit !== "true") {
 
             vm.handleResize();
 

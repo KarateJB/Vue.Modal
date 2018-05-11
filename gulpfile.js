@@ -39,7 +39,7 @@ gulp.task('minify-css', function () {
 });
 
 gulp.task('copy2demo', function () {
-    return gulp.src(root_path.dist + '*')
+    return gulp.src(root_path.dist + '*.min.*')
         .pipe(gulp.dest('demo'));
 });
 

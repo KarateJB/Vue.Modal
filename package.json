@@ -1,0 +1,32 @@
+{
+  "name": "vue-slim-modal",
+  "version": "1.0.0",
+  "description": "A slim modal for Vue.js",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-minify": "^2.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-concat": "^2.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KarateJB/Vue.Modal.git"
+  },
+  "keywords": [
+    "Vue",
+    "Modal"
+  ],
+  "author": "KarateJB",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KarateJB/Vue.Modal/issues"
+  },
+  "homepage": "https://github.com/KarateJB/Vue.Modal#readme"
+}
