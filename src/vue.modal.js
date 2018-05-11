@@ -91,8 +91,6 @@ Vue.component('pop-modal', {
                     top = exactPos.y;
                 }
 
-                //console.log('Final pos: ', left, top, windowWidth, windowHeight);
-
                 vm.modalMaskStyle = {
                     left: left + 'px',
                     top: top + 'px',
@@ -123,7 +121,7 @@ Vue.component('pop-modal', {
             });
 
             observable$
-                .map(function(es){ return Rx.Observable.of(rs).delay(200)})
+                .map( rs => Rx.Observable.of(rs).delay(200))
                 .switch()
                 .subscribe(function (x) {
                     vm.handleResize(x.width, x.height);
@@ -153,7 +151,3 @@ Vue.component('pop-modal', {
        </div>
     </transition >`,
 });
-
-
-
-

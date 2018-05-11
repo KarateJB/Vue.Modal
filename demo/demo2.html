@@ -3,30 +3,32 @@
 <head>
     <meta charset="utf-8" />    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/5.5.10/Rx.min.js"></script>
-    <link rel="stylesheet" href="~/vue.modal.css">
-    <script src="~/vue.modal.js"></script>
-    <script src="~/demo.js"></script>
+    <link rel="stylesheet" href="./vue.modal.min.css">
+    <script src="./vue.modal.min.js"></script>
+    
 </head>
 
 <body>
-    <div id="app">
-
+    <div id='app'>
         <h2>Demo for Vue.Modal</h2>
         <div class="col-md-2">
             <input type="button" value="Show Modal" class="form-control" v-on:click="openModal" />
         </div>
 
-        <pop-modal v-if="showModal" v-on:close="closeModal" v-on:cancel="showModal=false">
+        <pop-modal v-if="showModal" is-scroll="true" v-on:close="closeModal" v-on:cancel="showModal=false">
             <p slot="header">
-                {{ msg.header }}
+                {{ header }}
             </p>
             <div slot="body">
-                {{ msg.content }}
+                <h4 v-for="item in mockArr"> {{ item }}</h4>
             </div>
         </pop-modal>
     </div>
+
+
+    <script src="./demo.js"></script>
 </body>
 
 </html>
