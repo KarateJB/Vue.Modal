@@ -3,12 +3,17 @@ Vue.component('pop-modal', {
     data: function () {
         return {
             modalMaskClass: {
-                'modal-mask': this.isFit,
-                'modal-mask-scroll': !this.isFit
+                'modal-mask-fit': this.isFit,
+                'modal-mask-nonfit': !this.isFit
+            },
+            modalWrapperClass: {
+                'center': true,
+                'modal-wrapper-fit': this.isFit,
+                'modal-wrapper-nonfit': !this.isFit
             },
             modalBodyClass: {
-                'modal-body': !this.isFit,
-                'modal-body-scroll': this.isFit
+                'modal-body-fit': this.isFit,
+                'modal-body-nonfit': !this.isFit
             },
             modalMaskStyle: null
         }
@@ -132,7 +137,7 @@ Vue.component('pop-modal', {
     template: `
      <transition name="modal">
          <div :class="modalMaskClass" :style="modalMaskStyle" id="modalMask" ref="modalMask" v-on:click="closeModal">
-            <div class="modal-wrapper center">
+            <div :class="modalWrapperClass">
                 <div class="modal-container">
                     <div class="modal-header">
                         <h3><slot name="header"></slot></h3>

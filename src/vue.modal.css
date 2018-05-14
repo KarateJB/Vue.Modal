@@ -1,4 +1,4 @@
-.modal-mask {
+.modal-mask-nonfit {
     position: fixed;
     z-index: 1040; /*swal的z-index是1060，不能比他高。左邊的menu是1027...*/
     top: 0;
@@ -10,7 +10,7 @@
     transition: opacity .3s ease;
 }
 
-.modal-mask-scroll {
+.modal-mask-fit {
     position: absolute;
     z-index: 1040; /*swal的z-index是1060，不能比他高。左邊的menu是1027...*/
     top: 0;
@@ -24,12 +24,26 @@
 }
 
 
-.modal-wrapper {
+.modal-wrapper-fit {
     display: table-cell;
     margin: 0 auto;
     vertical-align: middle;
     overflow-y: scroll;
 }
+
+
+.modal-wrapper-nonfit {
+    position: fixed;
+    display: table-cell;
+    margin: 0 auto;
+    vertical-align: middle;
+    z-index: 1041; /*swal的z-index是1060，不能比他高。左邊的menu是1027...*/
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
 
 .modal-container {
     width: 500px;
@@ -47,16 +61,16 @@
     color: #42b983;
 }
 
-.modal-body {
-    min-height: 250px;
-    margin: 20px 0;
-}
-
-.modal-body-scroll {
+.modal-body-fit {
     height: 250px;
     overflow-y: auto;
     margin: 20px 0;
     /*width: 100%;*/
+}
+
+.modal-body-nonfit {
+    min-height: 250px;
+    margin: 20px 0;
 }
 
 .modal-default-button {

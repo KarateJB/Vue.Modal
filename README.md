@@ -3,6 +3,7 @@
 A slim pop-modal component for Vue.js
 
 
+
 ## Install
 
 ```
@@ -46,6 +47,16 @@ $ npm install vue-pop-modal --save
     </p>
 </pop-modal>
 ```
+
+## Release notes
+
+### v1.0.1 
+- Move modal to center when resizing it on non-fit mode 
+
+### v1.0.0 
+- First version
+
+
 
 
 ## License
