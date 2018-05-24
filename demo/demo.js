@@ -2,6 +2,7 @@ var app = new Vue({
     el: '#app',
     data: {
         showModal: false,
+        disableModalOk: false,
         header: "Hello",
         mockArr: []
     },

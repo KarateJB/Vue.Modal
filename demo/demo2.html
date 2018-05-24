@@ -14,10 +14,13 @@
     <div id='app'>
         <h2>Demo for Vue.Modal</h2>
         <div class="col-md-2">
+            <input type="button" :value="disableModalOk===true?'Enable OK button':'Disable OK button'" class="form-control" v-on:click="disableModalOk=!disableModalOk" />
+        </div>
+        <div class="col-md-2">
             <input type="button" value="Show Modal" class="form-control" v-on:click="openModal" />
         </div>
 
-        <pop-modal v-if="showModal" is-fix="true" v-on:close="closeModal" v-on:cancel="showModal=false">
+        <pop-modal v-if="showModal" is-fix="true" :disable-ok="disableModalOk" v-on:close="closeModal" v-on:cancel="showModal=false">
             <p slot="header">
                 {{ header }}
             </p>
