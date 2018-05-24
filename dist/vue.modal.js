@@ -1,19 +1,23 @@
 Vue.component('pop-modal', {
-    props: ['isFit'],
+    props: ['isFix'],
     data: function () {
         return {
             modalMaskClass: {
-                'modal-mask-fit': this.isFit,
-                'modal-mask-nonfit': !this.isFit
+                'modal-mask-fix': this.isFix,
+                'modal-mask-nonfix': !this.isFix
             },
+            // modalWrapperClass: {
+            //     'center': true,
+            //     'modal-wrapper-fix': this.isFix,
+            //     'modal-wrapper-nonfix': !this.isFix
+            // },
             modalWrapperClass: {
                 'center': true,
-                'modal-wrapper-fit': this.isFit,
-                'modal-wrapper-nonfit': !this.isFit
+                'modal-wrapper': true
             },
             modalBodyClass: {
-                'modal-body-fit': this.isFit,
-                'modal-body-nonfit': !this.isFit
+                'modal-body-fix': this.isFix,
+                'modal-body-nonfix': !this.isFix
             },
             modalMaskStyle: null
         }
@@ -116,7 +120,7 @@ Vue.component('pop-modal', {
         let vm = this;
 
 
-        if (vm.isFit !== "true") {
+        if (vm.isFix !== "true") {
 
             vm.handleResize();
 

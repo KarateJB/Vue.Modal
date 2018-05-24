@@ -44,4 +44,5 @@ gulp.task('copy2demo', function () {
 });
 
 
-gulp.task("default", ["minify-js", "minify-css", "copy2demo"]);
+gulp.task("default", ["minify-js", "minify-css"]);
+gulp.task("demo", ["copy2demo"]);
