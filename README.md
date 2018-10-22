@@ -54,6 +54,16 @@ $ npm install vue-pop-modal --save
 |------------|--------------------------------------------------------|---------|------|----------|
 |  isFix     | "true" for fixed modal or "false" for non-fixed modal. | String  |      | "false"  |
 |  disableOk | Disable OK button, usually used for form validation.   | Boolean |      |  false   |
+|  textOk    | The display text for Ok button                         | Boolean |      |  false   |
+
+
+## Events
+
+| Name | Description |
+|:-----|:------------|
+| close | Emits while user clicks on the Ok button, often emits a callback to save the content in the Modal |
+| cancel | Emits while user clicks on the mask area outside the pop-up modal  |
+
 
 
 <br />
@@ -61,8 +71,11 @@ $ npm install vue-pop-modal --save
 
 ## Release notes
 
+### v1.0.3
+- Add `textOk` prop 
+
 ### v1.0.2
-- Add `disable-ok` prop and fix wrong CSS 
+- Add `disableOk` prop and fix wrong CSS 
 
 ### v1.0.1 
 - Move modal to center when resizing it on non-fit mode 

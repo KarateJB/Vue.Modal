@@ -8,7 +8,6 @@ var app = new Vue({
     },
     methods:{
         openModal: function(){
-            console.log('test');
             this.showModal = true;
         },
 

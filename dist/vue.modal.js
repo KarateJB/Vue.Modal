@@ -1,5 +1,5 @@
 Vue.component('pop-modal', {
-    props: ['isFix','disableOk'],
+    props: ['isFix','disableOk','textOk'],
     data: function () {
         return {
             modalMaskClass: {
@@ -127,6 +127,8 @@ Vue.component('pop-modal', {
     mounted: function () {
         let vm = this;
 
+        if(!vm.textOk)
+            vm.textOk = "Ok";
 
         if (vm.isFix !== "true") {
 
@@ -159,7 +161,7 @@ Vue.component('pop-modal', {
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-success" v-on:click="$emit('close')" :disabled="isDisableOk">
-                            Ok
+                            {{ textOk }}
                         </button>
                     </div>
                 </div>

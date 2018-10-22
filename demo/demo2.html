@@ -20,7 +20,7 @@
             <input type="button" value="Show Modal" class="form-control" v-on:click="openModal" />
         </div>
 
-        <pop-modal v-if="showModal" is-fix="true" :disable-ok="disableModalOk" v-on:close="closeModal" v-on:cancel="showModal=false">
+        <pop-modal v-if="showModal" is-fix="true" :disable-ok="disableModalOk" text-ok="Save and close" v-on:close="closeModal" v-on:cancel="showModal=false">
             <p slot="header">
                 {{ header }}
             </p>
